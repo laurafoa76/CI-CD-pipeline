@@ -21,8 +21,9 @@ p {
 font-family: 'Times New Roman', Times, serif;
 font-size: 20px;
 }
+
 img {
-  display: block;
-  margin: auto;
+  width: 100%;
+  justify-content: center;
 }
 }
