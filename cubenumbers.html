@@ -10,7 +10,8 @@
 
 </head>
 <body>
-    <h2> Cube Numbers </h2>
+    <h1> Cube Numbers </h1>
+    
      <div class="navbar">
         <div><a href="/index.html">HOMEPAGE</a></div>
         <li><a href="/evennumbers.html">EVEN NUMBERS</a></li>
@@ -20,7 +21,20 @@
         <div><a href="/triangularnumbers.html">TRIANGULAR NUMBERS</a></div>
         
     </div>
-    <h2> These are the cube numbers</h2> 
-    <img src="images/cube numbers.jpg" alt="An image of cube numbers" width="900px">
+     <h2> Please enter a number between 1 and 10</h2>
+     <input id="numInput" type="number">
+     <button onclick="calCube()">cube</button>
+     <p id="result"></p>
+
+     <script>
+     function calCube() {
+     const num = parseFloat(document.getElementById('numInput').value);
+     const cube = num ** 3;
+     document.getElementById('result').textContent = `Cube of ${num} = ${cube}`;
+  }
+     </script>
+     <h2>Check your answer bellow:</h2>
+    <img src="images/cube numbers.jpg" alt="An image of cube numbers">
+
 </body>
 </html>

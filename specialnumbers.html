@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <h2> Prime Numbers </h2>
+    <h1> Prime Numbers </h1>
      <div class="navbar">
         <div><a href="/index.html">HOMEPAGE</a></div>
         <li><a href="/evennumbers.html">EVEN NUMBERS</a></li>
@@ -19,7 +19,29 @@
         <div><a href="/triangularnumbers.html">TRIANGULAR NUMBERS</a></div>
         
     </div>
-    <h2> The following are prime numbers</h2> 
-    <img src="images/primenumbers.jpg" alt="An image of prime numbers" width="900px">
+    <h2>Enter a number to check if it's a prime number: </h2>
+   
+     <input id="numInput" type="number" placeholder="Enter a number">
+     <button onclick="checkPrime()">Check</button>
+     <p id="result"></p>
+
+     <script>
+     function isPrime(n) {
+     if (n <= 1) return false;
+     for (let i = 2, sqrt = Math.sqrt(n); i <= sqrt; i++)
+     if (n % i === 0) return false;
+     return true;
+   }
+
+     function checkPrime() {
+     const num = parseInt(document.getElementById('numInput').value);
+     const result = isPrime(num) ? `${num} is Prime` : `${num} is Not Prime`;
+     document.getElementById('result').textContent = result;
+     }
+     </script>
+   
+   
+    <h2> Check your answer below:</h2> 
+    <img src="images/primenumbers.jpg" alt="An image of prime numbers" >
 </body>
 </html>

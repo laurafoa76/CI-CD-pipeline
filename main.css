@@ -9,7 +9,7 @@ text-align: center;
 
 h2 {
 color: rgb(43, 80, 226);
-text-align: center;
+text-align: left;
 }
 
 h3{
@@ -23,7 +23,10 @@ font-size: 20px;
 }
 
 img {
-  width: 20%;
-  justify-content: center;
+  .center-img
+   {display: block;
+  margin: 0;
+  
+  }
 }
 }

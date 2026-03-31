@@ -10,7 +10,8 @@
 
 </head>
 <body>
-    <h2> Odd Numbers </h2>
+    <h1> Odd Numbers </h1>
+    
      <div class="navbar">
         <li><a href="/index.html">HOMEPAGE</a></li>
         <li><a href="/evennumbers.html">EVEN NUMBERS</a></li>
@@ -20,7 +21,19 @@
         <div><a href="/triangularnumbers.html">TRIANGULAR NUMBERS</a></div>
         
     </div>
-    <h2> These are the odd numbers</h2> 
-    <img src="images/oddnumbers.jpg" alt="An image of odd numbers" width="900px">
+    
+      <h2>Please enter a number</h2>
+     <input id="numInput" type="number">
+     <button onclick="checkNum()">Check</button>
+     <p id="result"></p> 
+     <script>
+     function checkNum() {
+     const num = parseInt(document.getElementById('numInput').value);
+     const result = num % 2 === 0 ? "Even" : "Odd";
+     document.getElementById('result').textContent = `The number is ${result}`;
+     }
+     </script>
+     <h2> Check your answer bellow</h2>
+     <img src="images/oddnumbers.jpg" alt="An image of odd numbers">
 </body>
 </html>
